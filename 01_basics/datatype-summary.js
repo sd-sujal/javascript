@@ -53,4 +53,28 @@ console.log(typeof myFun);
 //        Function  =>  function
 //        Object  =>  object
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+// Stack (Primitive), Heap(non primitive)
+
+
+// let first = "Sujal"
+
+// let second = first
+// second = "Atkins"
+
+// console.log(first);
+// console.log(second);
+
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}//heap
+
+let userTwo = userOne
+
+userTwo.email = "sujaldwivedi65@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
