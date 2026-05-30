@@ -52,11 +52,41 @@ if (true){
     let a = 10
     const b = 20
     var c = 30
-    console.log("Inside BLOCK :",a);
+    // console.log("Inside BLOCK :",a);
     
 }
 
-console.log(a);
+// console.log(a);
 // console.log(b);
 // console.log(c);// var Completely Ignores Block Scope
 
+function one(){
+    const username = "Ssujal"
+
+    function two(){
+        const website = "github"
+        console.log(username);
+        
+    }
+    // console.log(website);// this is note define in the global scope 
+
+    two()
+    
+}
+
+// one()
+
+
+//+++++++++++++++++++++++++++++++ interesting ++++++++++++++++++++++++++++++
+addone(5)
+
+function addone(num){// function declaration 
+    return num + 1
+}
+
+// addtwo(10)// this will not work
+const addtwo = function(num){// function expression
+    return num + 2
+}
+
+// the difference between declaration and expression is hoisting 
