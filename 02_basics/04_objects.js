@@ -53,11 +53,38 @@ const user = [
 ]
 
 user[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+// +++++++++++++++++++++++++object destructuring +++++++++++++++++++++++++++++++++++++++++++++++==
+// Object destructuring is a JavaScript feature that allows extracting properties from an object
+//  and assigning them to variables in a concise way.
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseteacher: "Sujal Dwivedi"
+}
+
+// course.courseteacher
+const {courseteacher: teacher} = course// {} this used for destructuring the objec\
+console.log(teacher);
+
+// ++++++++++++++++++API++++++++++++++++++++++++++
+// Api sends information from backend inform
+{
+    "name": "sujal",
+    "coursename": "js in hindi"
+    "price": "free"
+}// this a example how JSON format data looks like 
+
+// JSON - JavaScript Object Notation 
+// API Application Programming Interface.
+// It is a set of rules and protocols that allows different software applications to communicate and share data with each other 
 
