@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUjal</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+        <li>C++</li>
+        <li>Python</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("JAVA")
+    addLanguage("Reactjs")
+
+    function addOptilanguage(lang){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptilanguage('golang')
+
+    //Edit
+    const secondLang=document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "Summes";
+
+
+    const newli =document.createElement('li')
+    newli.textContent = "anotherMethod"
+    secondLang.replaceWith(newli)
+
+    //edit 
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Type</li>'
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
