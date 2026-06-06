@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events </title>
+</head>
+<body style="background-color: #212121; color: #fff;  background-image:
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;">
+    <h2>Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/28359737/pexels-photo-28359737.jpeg" alt="photoshop"></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/14942582/pexels-photo-14942582.jpeg" alt=""></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/35571381/pexels-photo-35571381.jpeg" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/13681325/pexels-photo-13681325.jpeg" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/27328542/pexels-photo-27328542.jpeg" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    // attachEvent()
+    // jQuery
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl cl");
+    //     e.stopPropagation() 
+    // },false)  // first owl cl then clicked inside the ul when false i.e default event propogation(bubbling)
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // },false)
+
+    // document.getElementById('google').addEventListener
+    // ('click',function(e){
+    //     e.preventDefault()
+    //     console.log("google clicked");
+    // },false)
+
+    // Event propogation- Event Bubbling and Event Capturing 
+    // useCapture = false → Bubbling (default)
+    // useCapture = true → Capturing
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode
+        removeIt.remove();
+    },false)
+
+</script>
+</html>
