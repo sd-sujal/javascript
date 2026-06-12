@@ -46,7 +46,7 @@ weather-app/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/sd-sujal/weather-app.git
 ```
 
 ### 2. Navigate to the Project Folder
