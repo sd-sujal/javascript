@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #0f172a
+    );
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    max-width: 750px;
+}
+
+.container h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.container h1 span{
+    color: #22c55e;
+    position: relative;
+}
+
+.container h1 span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 4px;
+    background: #22c55e;
+    border-radius: 10px;
+}
+
+/* Password Display Box */
+.display{
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 22px 25px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.display:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.display input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.display input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+.display img{
+    width: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.display img:hover{
+    transform: scale(1.15);
+}
+
+/* Generate Button */
+.container button{
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 16px 28px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(34,197,94,0.25);
+}
+
+.container button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(34,197,94,0.4);
+}
+
+.container button:active{
+    transform: scale(0.98);
+}
+
+.container button img{
+    width: 22px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+
+    .container h1{
+        font-size: 2.2rem;
+    }
+
+    .display{
+        padding: 18px;
+    }
+
+    .display input{
+        font-size: 1rem;
+    }
+
+    .container button{
+        width: 100%;
+    }
+}
